@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GeoExplorator-PWA</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icon-192.png" sizes="192x192" />
+  <meta name="theme-color" content="#2d8cf0" />
+</head>
+<body>
+  <h1>GeoExplorator-PWA</h1>
+  <p>Aplicație demo PWA pentru explorarea geografică.</p>
+  <button onclick="alert('Salutare de la GeoExplorator!')">Testează aplicația</button>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('service-worker.js');
+      });
+    }
+  </script>
+</body>
+</html>
